@@ -1,0 +1,684 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+}
+
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.router-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+
+  padding: 28px 20px;
+
+  background: #ffffff;
+
+  border-right: 1px solid #dddff0;
+
+  box-shadow: 2px 0 12px rgba(80, 70, 150, 0.06);
+}
+
+
+/* SIDEBAR HEADING */
+
+.sidebar h3 {
+  margin: 0 0 24px;
+  padding-left: 10px;
+
+  font-size: 22px;
+  font-weight: 500;
+
+  color: #3f435f;
+}
+
+
+/* SIDEBAR LIST */
+
+.sidebar ul {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+
+/* SIDEBAR LINKS */
+
+.sidebar a {
+  display: block;
+
+  padding: 11px 14px;
+
+  color: #555b70;
+  background: #f8f8fc;
+
+  border: 1px solid #e3e4ef;
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  transition: all 0.2s ease;
+}
+
+
+/* SIDEBAR HOVER */
+
+.sidebar a:hover {
+  color: #5b4bb7;
+
+  background: #f0edff;
+
+  border-color: #c9c1f2;
+
+  padding-left: 18px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  flex: 1;
+
+  padding: 28px 35px;
+
+  background: #f4f6fb;
+}
+
+
+/* =========================
+   CONTENT HEADING
+========================= */
+
+.content h1 {
+  margin: 0 0 18px;
+
+  text-align: center;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  color: #4b4f72;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================
+   ROUTER BOX
+========================= */
+
+.router-box {
+  margin-top: 10px;
+
+  min-height: 100px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #dedff0;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 14px rgba(80, 70, 150, 0.06);
+}
+
+
+/* DEFAULT MESSAGE */
+
+.router-box > p {
+  margin: 0;
+
+  padding: 12px 15px;
+
+  color: #666b7d;
+
+  background: #f5f3ff;
+
+  border-left: 3px solid #8a7bd1;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   PAGE HEADINGS
+========================= */
+
+.router-box h2 {
+  margin: 0 0 20px;
+
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  color: #4b4f72;
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+  width: 280px;
+
+  padding: 26px;
+
+  margin: 25px auto;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #dedff0;
+
+  border-radius: 12px;
+
+  box-shadow: 0 6px 18px rgba(80, 70, 150, 0.09);
+
+  transition: all 0.2s ease;
+}
+
+
+/* PROFILE CARD HOVER */
+
+.profile-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #cfc7f0;
+
+  box-shadow: 0 10px 24px rgba(80, 70, 150, 0.14);
+}
+
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.avatar {
+  width: 88px;
+  height: 88px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  display: block;
+
+  margin: 0 auto 18px;
+
+  border: 4px solid #eeeaff;
+
+  transition: all 0.2s ease;
+}
+
+
+/* IMAGE HOVER */
+
+.profile-card:hover .avatar {
+  border-color: #d9d2fa;
+
+  transform: scale(1.04);
+}
+
+
+/* =========================
+   PROFILE NAME
+========================= */
+
+.profile-card h2 {
+  margin: 0 0 8px;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  color: #454766;
+}
+
+
+/* =========================
+   PROFILE ROLE
+========================= */
+
+.profile-card h3 {
+  margin: 0 0 13px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #7466b8;
+
+  background: #f3f1ff;
+
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+}
+
+
+/* =========================
+   PROFILE DESCRIPTION
+========================= */
+
+.profile-card p {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  color: #666b7d;
+}
+
+
+/* =========================
+   DYNAMIC CARDS
+========================= */
+
+.cards {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: stretch;
+
+  gap: 22px;
+
+  flex-wrap: wrap;
+}
+
+
+/* =========================
+   COUNTERS
+========================= */
+
+.counter-box {
+  max-width: 850px;
+
+  margin: 25px auto;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #dedff0;
+
+  border-radius: 12px;
+
+  box-shadow: 0 6px 18px rgba(80, 70, 150, 0.09);
+
+  transition: all 0.2s ease;
+}
+
+
+/* COUNTER HOVER */
+
+.counter-box:hover {
+  border-color: #cfc7f0;
+
+  box-shadow: 0 9px 22px rgba(80, 70, 150, 0.13);
+}
+
+
+/* COUNTER HEADING */
+
+.counter-box h2 {
+  margin: 0 0 18px;
+
+  font-size: 25px;
+
+  font-weight: 600;
+
+  color: #454766;
+
+  text-align: center;
+}
+
+
+/* COUNTER VALUE */
+
+.counter-box h3 {
+  margin: 0 0 18px;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  color: #7466b8;
+
+  text-align: center;
+}
+
+
+/* COUNTER BUTTONS */
+
+.counter-box .btn {
+  margin-right: 7px;
+
+  margin-bottom: 7px;
+
+  padding: 9px 16px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  transition: all 0.2s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.counter-box .btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 10px rgba(80, 70, 150, 0.15);
+}
+
+
+/* =========================
+   TODO
+========================= */
+
+.todo-box {
+  width: 500px;
+
+  max-width: 100%;
+
+  margin: 25px auto;
+
+  padding: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #dedff0;
+
+  border-radius: 12px;
+
+  box-shadow: 0 6px 18px rgba(80, 70, 150, 0.09);
+}
+
+
+/* TODO HEADING */
+
+.todo-box h4 {
+  margin: 0 0 20px;
+
+  color: #454766;
+
+  font-size: 23px;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+/* TODO INPUT */
+
+.todo-box input {
+  width: 100%;
+
+  border: 1px solid #d9d7eb;
+
+  border-radius: 7px;
+
+  padding: 10px 12px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+
+/* INPUT FOCUS */
+
+.todo-box input:focus {
+  border-color: #8a7bd1;
+
+  box-shadow: 0 0 0 3px rgba(138, 123, 209, 0.12);
+}
+
+
+/* TODO ADD BUTTON */
+
+.todo-box .btn {
+  border-radius: 7px;
+
+  padding: 9px 18px;
+}
+
+
+/* =========================
+   TODO ITEM
+========================= */
+
+.todo-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: 10px;
+
+  padding: 13px 14px;
+
+  background: #f8f7ff;
+
+  border: 1px solid #e5e2f5;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  color: #4e5168;
+
+  transition: all 0.2s ease;
+}
+
+
+/* TODO HOVER */
+
+.todo-item:hover {
+  background: #f1efff;
+
+  border-color: #cfc7f0;
+
+  transform: translateX(3px);
+}
+
+
+/* TODO TEXT */
+
+.todo-text {
+  flex: 1;
+
+  cursor: pointer;
+
+  line-height: 1.5;
+}
+
+
+/* COMPLETED TODO */
+
+.todo-text[style*="line-through"] {
+  color: #999cad;
+}
+
+
+/* DELETE BUTTON */
+
+.todo-item button {
+  min-width: 65px;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .router-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 20px;
+
+    border-right: none;
+
+    border-bottom: 1px solid #dddff0;
+  }
+
+  .sidebar h3 {
+    font-size: 20px;
+
+    margin-bottom: 18px;
+  }
+
+  .sidebar ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+  }
+
+  .sidebar li {
+    margin: 0;
+  }
+
+  .sidebar a {
+    padding: 9px 12px;
+  }
+
+  .content {
+    padding: 25px 20px;
+  }
+
+  .content h1 {
+    font-size: 26px;
+
+    text-align: center;
+  }
+
+  .router-box {
+    padding: 18px;
+  }
+
+  .cards {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .profile-card {
+    width: 100%;
+
+    max-width: 280px;
+  }
+
+  .counter-box {
+    width: 100%;
+
+    padding: 20px;
+  }
+
+  .todo-box {
+    width: 100%;
+
+    padding: 18px;
+  }
+
+  .todo-box h4 {
+    font-size: 21px;
+  }
+
+  .todo-item {
+    padding: 11px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .content {
+    padding: 20px 15px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+  }
+
+  .sidebar a {
+    font-size: 13px;
+
+    padding: 8px 10px;
+  }
+
+  .router-box {
+    padding: 15px;
+  }
+
+  .profile-card {
+    padding: 22px;
+  }
+}
