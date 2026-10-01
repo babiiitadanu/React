@@ -5,9 +5,9 @@ import StaticPage from "./pages/StaticPage";
 import DynamicPage from "./pages/DynamicPage";
 import CounterPage from "./pages/CounterPage";
 import TodoPage from "./pages/TodoPage";
+import RBBadges from "./components/RBBadges";
 
-function App() 
-{
+function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -21,6 +21,8 @@ function App()
           <Route path="counters" element={<CounterPage />} />
 
           <Route path="todo" element={<TodoPage />} />
+
+          <Route path="badges" element={<RBBadges />} />
 
         </Route>
 
