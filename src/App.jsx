@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./pages/Layout";
-import StaticPage from "./pages/StaticPage";
+import StaticPage from "./StaticPage";
 import DynamicPage from "./pages/DynamicPage";
 import CounterPage from "./pages/CounterPage";
 import TodoPage from "./pages/TodoPage";
@@ -11,7 +11,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<Layout />}>
 
           <Route path="static" element={<StaticPage />} />
@@ -25,7 +24,6 @@ function App() {
           <Route path="badges" element={<RBBadges />} />
 
         </Route>
-
       </Routes>
     </BrowserRouter>
   );

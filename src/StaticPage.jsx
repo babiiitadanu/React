@@ -1,5 +1,4 @@
-import StaticProfileCard from "../components/StaticProfileCard";
-
+import StaticProfileCard from "./components/StaticProfileCard";
 function StaticPage() {
   return (
     <div>
