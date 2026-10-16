@@ -7,12 +7,9 @@ function Sidebar() {
       <h3>React Project</h3>
 
       <Accordion>
-
         {/* Interactive Components */}
         <Accordion.Item eventKey="0">
-          <Accordion.Header>
-            Interactive Components
-          </Accordion.Header>
+          <Accordion.Header>Interactive Components</Accordion.Header>
 
           <Accordion.Body>
             <ul>
@@ -31,16 +28,43 @@ function Sidebar() {
               <li>
                 <Link to="/todo">TodoList</Link>
               </li>
+
+              <li>
+                <Link to="/accordion">Accordion</Link>
+              </li>
+
+              <li>
+                <Link to="/carousel">Carousel</Link>
+              </li>
+
+              <li>
+                <Link to="/dropdowns">Dropdowns</Link>
+              </li>
+
+              <li>
+                <Link to="/modal">Modal</Link>
+              </li>
+
+              <li>
+                <Link to="/navbaroffcanvas">Navbaroffcanvas</Link>
+              </li>
+
+              <li>
+                <Link to="/navtabs">Navtabs</Link>
+              </li>
+
+              <li>
+                <Link to="/overlays">Overlays</Link>
+              </li>
+
+             
             </ul>
           </Accordion.Body>
         </Accordion.Item>
 
-
         {/* Non Interactive Components */}
         <Accordion.Item eventKey="1">
-          <Accordion.Header>
-            Non Interactive Components
-          </Accordion.Header>
+          <Accordion.Header>Non Interactive Components</Accordion.Header>
 
           <Accordion.Body>
             <ul>
@@ -67,19 +91,33 @@ function Sidebar() {
               <li>
                 <Link to="/images">Images</Link>
               </li>
-              
+
+              <li>
+                <Link to="/listgroup">ListGroup</Link>
+              </li>
+
+              <li>
+                <Link to="/figure">Figure</Link>
+              </li>
+
               <li>
                 <Link to="/pagination">Pagination</Link>
               </li>
 
               <li>
-                <Link to="/prgressbars">Prgress Bars</Link>
+                <Link to="/progressbars">Progress Bars</Link>
               </li>
 
+              <li>
+                <Link to="/spinners">Spinners</Link>
+              </li>
+
+              <li>
+                <Link to="/tables">Tables</Link>
+              </li>
             </ul>
           </Accordion.Body>
         </Accordion.Item>
-
       </Accordion>
     </div>
   );
