@@ -1,10 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Layout from "./pages/Layout";
 import StaticPage from "./StaticPage";
 import DynamicPage from "./pages/DynamicPage";
 import CounterPage from "./pages/CounterPage";
 import TodoPage from "./pages/TodoPage";
+
+// Blog Listing
+import BlogListing from "./blogListing/BlogListing";
+import ProductDetails from "./blogListing/ProductDetails";
 
 import RBBadges from "./components/RBBadges";
 import RBBreadcrumbs from "./components/RBBreadcrumbs";
@@ -26,15 +32,25 @@ import RBNavbarOffcanvas from "./components/RBNavbarOffcanvas";
 import RBNavTabs from "./components/RBNavTabs";
 import RBOverlays from "./components/RBOverlays";
 
+import RBForms from "./components/RBForms";
+import RBFormikForm from "./components/RBFormikForm";
+import RHFForm from "./components/RHFForm";
+import RHFFormYup from "./components/RHFFormYup";
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
+
           <Route path="static" element={<StaticPage />} />
           <Route path="dynamic" element={<DynamicPage />} />
           <Route path="counters" element={<CounterPage />} />
           <Route path="todo" element={<TodoPage />} />
+
+          {/* Blog Listing and Product Details */}
+          <Route path="blog-listing" element={<BlogListing />} />
+          <Route path="product-details/:id" element={<ProductDetails />} />
 
           <Route path="badges" element={<RBBadges />} />
           <Route path="breadcrumbs" element={<RBBreadcrumbs />} />
@@ -55,8 +71,16 @@ function App() {
           <Route path="navbaroffcanvas" element={<RBNavbarOffcanvas />} />
           <Route path="navtabs" element={<RBNavTabs />} />
           <Route path="overlays" element={<RBOverlays />} />
+
+          <Route path="forms" element={<RBForms />} />
+          <Route path="formikform" element={<RBFormikForm />} />
+          <Route path="rhfform" element={<RHFForm />} />
+          <Route path="rhfformyup" element={<RHFFormYup />} />
+
         </Route>
       </Routes>
+
+      <ToastContainer position="top-right" autoClose={2000} />
     </BrowserRouter>
   );
 }
