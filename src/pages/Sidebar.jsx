@@ -1,3 +1,4 @@
+
 import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
 
@@ -84,9 +85,23 @@ function Sidebar() {
 
           <Accordion.Body>
             <ul>
-              <li>
-                <Link to="/blog-listing">Blog Listing</Link>
-              </li>
+              <li><Link to="/blog-listing">Blog Listing</Link></li>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
+
+        {/* Shopping */}
+
+        <Accordion.Item eventKey="4">
+          <Accordion.Header>
+            Shopping
+          </Accordion.Header>
+
+          <Accordion.Body>
+            <ul>
+              <li><Link to="/shop">Shop</Link></li>
+              <li><Link to="/wishlist">Wishlist</Link></li>
+              <li><Link to="/cart">Cart</Link></li>
             </ul>
           </Accordion.Body>
         </Accordion.Item>

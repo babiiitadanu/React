@@ -1,14 +1,16 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Layout from "./pages/Layout";
+
 import StaticPage from "./StaticPage";
 import DynamicPage from "./pages/DynamicPage";
 import CounterPage from "./pages/CounterPage";
 import TodoPage from "./pages/TodoPage";
 
-// Blog Listing
 import BlogListing from "./blogListing/BlogListing";
 import ProductDetails from "./blogListing/ProductDetails";
 
@@ -24,6 +26,7 @@ import RBPagination from "./components/RBPagination";
 import RBProgressBars from "./components/RBProgressBars";
 import RBSpinners from "./components/RBSpinners";
 import RBTables from "./components/RBTables";
+
 import RBAccordion from "./components/RBAccordion";
 import RBCarousel from "./components/RBCarousel";
 import RBDropdowns from "./components/RBDropdowns";
@@ -37,20 +40,35 @@ import RBFormikForm from "./components/RBFormikForm";
 import RHFForm from "./components/RHFForm";
 import RHFFormYup from "./components/RHFFormYup";
 
+import ShopNavbar from "./components/ShopNavbar";
+import Shop from "./pages/Shop";
+import Wishlist from "./pages/Wishlist";
+import Cart from "./pages/Cart";
+
+import { useShopState } from "./components/ShopContext";
+
 function App() {
+  const {
+    wishlistItems,
+    setWishlistItems,
+    cartItems,
+    setCartItems,
+  } = useShopState();
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-
           <Route path="static" element={<StaticPage />} />
           <Route path="dynamic" element={<DynamicPage />} />
           <Route path="counters" element={<CounterPage />} />
           <Route path="todo" element={<TodoPage />} />
 
-          {/* Blog Listing and Product Details */}
           <Route path="blog-listing" element={<BlogListing />} />
-          <Route path="product-details/:id" element={<ProductDetails />} />
+          <Route
+            path="product-details/:id"
+            element={<ProductDetails />}
+          />
 
           <Route path="badges" element={<RBBadges />} />
           <Route path="breadcrumbs" element={<RBBreadcrumbs />} />
@@ -64,11 +82,15 @@ function App() {
           <Route path="progressbars" element={<RBProgressBars />} />
           <Route path="spinners" element={<RBSpinners />} />
           <Route path="tables" element={<RBTables />} />
+
           <Route path="accordion" element={<RBAccordion />} />
           <Route path="carousel" element={<RBCarousel />} />
           <Route path="dropdowns" element={<RBDropdowns />} />
           <Route path="modal" element={<RBModal />} />
-          <Route path="navbaroffcanvas" element={<RBNavbarOffcanvas />} />
+          <Route
+            path="navbaroffcanvas"
+            element={<RBNavbarOffcanvas />}
+          />
           <Route path="navtabs" element={<RBNavTabs />} />
           <Route path="overlays" element={<RBOverlays />} />
 
@@ -77,10 +99,70 @@ function App() {
           <Route path="rhfform" element={<RHFForm />} />
           <Route path="rhfformyup" element={<RHFFormYup />} />
 
+          {/* Shop */}
+          <Route
+            path="shop"
+            element={
+              <>
+                <ShopNavbar
+                  wishlistItems={wishlistItems}
+                  cartItems={cartItems}
+                />
+                <Shop
+                  wishlistItems={wishlistItems}
+                  setWishlistItems={setWishlistItems}
+                  cartItems={cartItems}
+                  setCartItems={setCartItems}
+                />
+              </>
+            }
+          />
+
+          {/* Wishlist */}
+          <Route
+            path="wishlist"
+            element={
+              <>
+                <ShopNavbar
+                  wishlistItems={wishlistItems}
+                  cartItems={cartItems}
+                />
+                <Wishlist
+                  wishlistItems={wishlistItems}
+                  setWishlistItems={setWishlistItems}
+                  cartItems={cartItems}
+                  setCartItems={setCartItems}
+                />
+              </>
+            }
+          />
+
+          {/* Cart */}
+          <Route
+            path="cart"
+            element={
+              <>
+                <ShopNavbar
+                  wishlistItems={wishlistItems}
+                  cartItems={cartItems}
+                />
+                <Cart
+                  cartItems={cartItems}
+                  setCartItems={setCartItems}
+                />
+              </>
+            }
+          />
         </Route>
       </Routes>
 
-      <ToastContainer position="top-right" autoClose={2000} />
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+      />
     </BrowserRouter>
   );
 }
